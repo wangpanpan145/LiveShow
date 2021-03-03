@@ -25,6 +25,7 @@
 		044DCA5325B91C4700A596AC /* Extension-UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DCA5225B91C4700A596AC /* Extension-UIColor.swift */; };
 		045E769F25BAD1D900187A68 /* RoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E769E25BAD1D900187A68 /* RoomVC.swift */; };
 		045E76A725BAD70600187A68 /* RoomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045E76A625BAD70600187A68 /* RoomVC.xib */; };
+		04E0F55725EF701000A361B3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F55625EF701000A361B3 /* NetworkTools.swift */; };
 		CCD7FA804208B31F23BF7541 /* Pods_LiveShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2707CA3C5B53E903F74B4463 /* Pods_LiveShow.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		044DCA5225B91C4700A596AC /* Extension-UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UIColor.swift"; sourceTree = "<group>"; };
 		045E769E25BAD1D900187A68 /* RoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVC.swift; sourceTree = "<group>"; };
 		045E76A625BAD70600187A68 /* RoomVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomVC.xib; sourceTree = "<group>"; };
+		04E0F55625EF701000A361B3 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		2707CA3C5B53E903F74B4463 /* Pods_LiveShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EC8AB41D7EC78256AD63CD /* Pods-LiveShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveShow.release.xcconfig"; path = "Target Support Files/Pods-LiveShow/Pods-LiveShow.release.xcconfig"; sourceTree = "<group>"; };
 		D26F67F24F31DBDF7DCA5C0F /* Pods-LiveShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveShow.debug.xcconfig"; path = "Target Support Files/Pods-LiveShow/Pods-LiveShow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		0437B30825B832AA0059C0A4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				04E0F55525EF6FDF00A361B3 /* NetManager */,
 				0437B30925B832D60059C0A4 /* Extension */,
 			);
 			path = Utils;
@@ -212,6 +215,14 @@
 				045E76A625BAD70600187A68 /* RoomVC.xib */,
 			);
 			path = Live;
+			sourceTree = "<group>";
+		};
+		04E0F55525EF6FDF00A361B3 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				04E0F55625EF701000A361B3 /* NetworkTools.swift */,
+			);
+			path = NetManager;
 			sourceTree = "<group>";
 		};
 		05413333CBC696A9C2BC1340 /* Pods */ = {
@@ -351,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0437B2D525B804A40059C0A4 /* MainTabBarController.swift in Sources */,
+				04E0F55725EF701000A361B3 /* NetworkTools.swift in Sources */,
 				0437B2E325B80B730059C0A4 /* HomeVC.swift in Sources */,
 				0437B30125B8292E0059C0A4 /* ProfileVC.swift in Sources */,
 				0437B2FB25B8291B0059C0A4 /* RankVC.swift in Sources */,

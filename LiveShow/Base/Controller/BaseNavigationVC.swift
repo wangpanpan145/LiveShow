@@ -32,8 +32,8 @@ class BaseNavigationVC: UINavigationController {
         let action = Selector(("handleNavigationTransition:"))
         
         
-        print(targets)
-        print(targetObjc)
+        //print(targets)
+        //print(targetObjc)
         
         let panGes = UIPanGestureRecognizer(target: target, action: action)
         view.addGestureRecognizer(panGes)
