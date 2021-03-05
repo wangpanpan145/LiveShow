@@ -16,10 +16,6 @@ class NetworkTools: NSObject {
         }
     }
 }
-
 /**
  闭包 参数里面其实只能是类型 加上result 我感觉只是增加可读性而已 所有前面加个_ 没有标签
  */
-
-
-

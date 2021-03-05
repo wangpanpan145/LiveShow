@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = MainTabBarController.init()
+        //self.window?.rootViewController = MainTabBarController.init()
+        self.window?.rootViewController = LoginVC.init()
         //全局
         UINavigationBar.appearance().barTintColor = UIColor.black
         return true

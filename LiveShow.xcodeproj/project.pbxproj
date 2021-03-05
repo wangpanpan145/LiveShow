@@ -22,6 +22,7 @@
 		0437B2FE25B829250059C0A4 /* DiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437B2FD25B829250059C0A4 /* DiscoverVC.swift */; };
 		0437B30125B8292E0059C0A4 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437B30025B8292E0059C0A4 /* ProfileVC.swift */; };
 		0437B30625B82BEA0059C0A4 /* BaseNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437B30525B82BEA0059C0A4 /* BaseNavigationVC.swift */; };
+		0446168325F22F720044A1B9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446168225F22F720044A1B9 /* LoginVC.swift */; };
 		044DCA5325B91C4700A596AC /* Extension-UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DCA5225B91C4700A596AC /* Extension-UIColor.swift */; };
 		045E769F25BAD1D900187A68 /* RoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E769E25BAD1D900187A68 /* RoomVC.swift */; };
 		045E76A725BAD70600187A68 /* RoomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045E76A625BAD70600187A68 /* RoomVC.xib */; };
@@ -47,6 +48,7 @@
 		0437B2FD25B829250059C0A4 /* DiscoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverVC.swift; sourceTree = "<group>"; };
 		0437B30025B8292E0059C0A4 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		0437B30525B82BEA0059C0A4 /* BaseNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationVC.swift; sourceTree = "<group>"; };
+		0446168225F22F720044A1B9 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		044DCA5225B91C4700A596AC /* Extension-UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UIColor.swift"; sourceTree = "<group>"; };
 		045E769E25BAD1D900187A68 /* RoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVC.swift; sourceTree = "<group>"; };
 		045E76A625BAD70600187A68 /* RoomVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomVC.xib; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		0437B2D725B809860059C0A4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0446168125F22F590044A1B9 /* Login */,
 				045E769D25BAD1BA00187A68 /* Live */,
 				0437B2D325B803F30059C0A4 /* Main */,
 				0437B2DB25B809A40059C0A4 /* Profile */,
@@ -206,6 +209,14 @@
 				044DCA5225B91C4700A596AC /* Extension-UIColor.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		0446168125F22F590044A1B9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0446168225F22F720044A1B9 /* LoginVC.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		045E769D25BAD1BA00187A68 /* Live */ = {
@@ -363,6 +374,7 @@
 			files = (
 				0437B2D525B804A40059C0A4 /* MainTabBarController.swift in Sources */,
 				04E0F55725EF701000A361B3 /* NetworkTools.swift in Sources */,
+				0446168325F22F720044A1B9 /* LoginVC.swift in Sources */,
 				0437B2E325B80B730059C0A4 /* HomeVC.swift in Sources */,
 				0437B30125B8292E0059C0A4 /* ProfileVC.swift in Sources */,
 				0437B2FB25B8291B0059C0A4 /* RankVC.swift in Sources */,
