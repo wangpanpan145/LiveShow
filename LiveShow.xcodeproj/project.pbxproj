@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0405A47D25F3354D00820C77 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405A47C25F3354D00820C77 /* BaseModel.swift */; };
+		0405A48125F3459700820C77 /* LoginCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405A48025F3459700820C77 /* LoginCodeModel.swift */; };
 		0437B26C25B7F4B90059C0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437B26B25B7F4B90059C0A4 /* AppDelegate.swift */; };
 		0437B27325B7F4B90059C0A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437B27125B7F4B90059C0A4 /* Main.storyboard */; };
 		0437B27525B7F4BA0059C0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0437B27425B7F4BA0059C0A4 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0405A47C25F3354D00820C77 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		0405A48025F3459700820C77 /* LoginCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCodeModel.swift; sourceTree = "<group>"; };
 		0437B26825B7F4B90059C0A4 /* LiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0437B26B25B7F4B90059C0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0437B27225B7F4B90059C0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0405A47B25F3353E00820C77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0405A47C25F3354D00820C77 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0437B25F25B7F4B90059C0A4 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +192,7 @@
 		0437B2DC25B80AFD0059C0A4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0405A47B25F3353E00820C77 /* Model */,
 				0437B2DD25B80B020059C0A4 /* Controller */,
 			);
 			path = Base;
@@ -215,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				0446168225F22F720044A1B9 /* LoginVC.swift */,
+				0405A48025F3459700820C77 /* LoginCodeModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -375,12 +389,14 @@
 				0437B2D525B804A40059C0A4 /* MainTabBarController.swift in Sources */,
 				04E0F55725EF701000A361B3 /* NetworkTools.swift in Sources */,
 				0446168325F22F720044A1B9 /* LoginVC.swift in Sources */,
+				0405A47D25F3354D00820C77 /* BaseModel.swift in Sources */,
 				0437B2E325B80B730059C0A4 /* HomeVC.swift in Sources */,
 				0437B30125B8292E0059C0A4 /* ProfileVC.swift in Sources */,
 				0437B2FB25B8291B0059C0A4 /* RankVC.swift in Sources */,
 				0437B2DF25B80B230059C0A4 /* BaseVC.swift in Sources */,
 				044DCA5325B91C4700A596AC /* Extension-UIColor.swift in Sources */,
 				0437B30625B82BEA0059C0A4 /* BaseNavigationVC.swift in Sources */,
+				0405A48125F3459700820C77 /* LoginCodeModel.swift in Sources */,
 				0437B26C25B7F4B90059C0A4 /* AppDelegate.swift in Sources */,
 				0437B2FE25B829250059C0A4 /* DiscoverVC.swift in Sources */,
 				045E769F25BAD1D900187A68 /* RoomVC.swift in Sources */,
