@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0405A47D25F3354D00820C77 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405A47C25F3354D00820C77 /* BaseModel.swift */; };
-		0405A48125F3459700820C77 /* LoginCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405A48025F3459700820C77 /* LoginCodeModel.swift */; };
 		0437B26C25B7F4B90059C0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437B26B25B7F4B90059C0A4 /* AppDelegate.swift */; };
 		0437B27325B7F4B90059C0A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0437B27125B7F4B90059C0A4 /* Main.storyboard */; };
 		0437B27525B7F4BA0059C0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0437B27425B7F4BA0059C0A4 /* Assets.xcassets */; };
@@ -29,12 +27,13 @@
 		045E769F25BAD1D900187A68 /* RoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E769E25BAD1D900187A68 /* RoomVC.swift */; };
 		045E76A725BAD70600187A68 /* RoomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045E76A625BAD70600187A68 /* RoomVC.xib */; };
 		04E0F55725EF701000A361B3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F55625EF701000A361B3 /* NetworkTools.swift */; };
+		04FE4BF825F5CFEF00D6F734 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE4BF725F5CFEF00D6F734 /* LoginModel.swift */; };
+		04FE4BFC25F5D5B100D6F734 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE4BFB25F5D5B100D6F734 /* BaseModel.swift */; };
+		04FE4C2025F5FAFC00D6F734 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE4C1F25F5FAFC00D6F734 /* HomeModel.swift */; };
 		CCD7FA804208B31F23BF7541 /* Pods_LiveShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2707CA3C5B53E903F74B4463 /* Pods_LiveShow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0405A47C25F3354D00820C77 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		0405A48025F3459700820C77 /* LoginCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCodeModel.swift; sourceTree = "<group>"; };
 		0437B26825B7F4B90059C0A4 /* LiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0437B26B25B7F4B90059C0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0437B27225B7F4B90059C0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +56,9 @@
 		045E769E25BAD1D900187A68 /* RoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVC.swift; sourceTree = "<group>"; };
 		045E76A625BAD70600187A68 /* RoomVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomVC.xib; sourceTree = "<group>"; };
 		04E0F55625EF701000A361B3 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		04FE4BF725F5CFEF00D6F734 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		04FE4BFB25F5D5B100D6F734 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		04FE4C1F25F5FAFC00D6F734 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		2707CA3C5B53E903F74B4463 /* Pods_LiveShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EC8AB41D7EC78256AD63CD /* Pods-LiveShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveShow.release.xcconfig"; path = "Target Support Files/Pods-LiveShow/Pods-LiveShow.release.xcconfig"; sourceTree = "<group>"; };
 		D26F67F24F31DBDF7DCA5C0F /* Pods-LiveShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveShow.debug.xcconfig"; path = "Target Support Files/Pods-LiveShow/Pods-LiveShow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 		0405A47B25F3353E00820C77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0405A47C25F3354D00820C77 /* BaseModel.swift */,
+				04FE4BFB25F5D5B100D6F734 /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +158,7 @@
 		0437B2D825B809940059C0A4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				04FE4C1E25F5FAE200D6F734 /* Model */,
 				0437B2E225B80B730059C0A4 /* HomeVC.swift */,
 				0437B2EE25B81CBB0059C0A4 /* Home.storyboard */,
 			);
@@ -228,7 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				0446168225F22F720044A1B9 /* LoginVC.swift */,
-				0405A48025F3459700820C77 /* LoginCodeModel.swift */,
+				04FE4BF725F5CFEF00D6F734 /* LoginModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -248,6 +251,14 @@
 				04E0F55625EF701000A361B3 /* NetworkTools.swift */,
 			);
 			path = NetManager;
+			sourceTree = "<group>";
+		};
+		04FE4C1E25F5FAE200D6F734 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04FE4C1F25F5FAFC00D6F734 /* HomeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		05413333CBC696A9C2BC1340 /* Pods */ = {
@@ -387,16 +398,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0437B2D525B804A40059C0A4 /* MainTabBarController.swift in Sources */,
+				04FE4BF825F5CFEF00D6F734 /* LoginModel.swift in Sources */,
+				04FE4BFC25F5D5B100D6F734 /* BaseModel.swift in Sources */,
 				04E0F55725EF701000A361B3 /* NetworkTools.swift in Sources */,
 				0446168325F22F720044A1B9 /* LoginVC.swift in Sources */,
-				0405A47D25F3354D00820C77 /* BaseModel.swift in Sources */,
 				0437B2E325B80B730059C0A4 /* HomeVC.swift in Sources */,
 				0437B30125B8292E0059C0A4 /* ProfileVC.swift in Sources */,
 				0437B2FB25B8291B0059C0A4 /* RankVC.swift in Sources */,
+				04FE4C2025F5FAFC00D6F734 /* HomeModel.swift in Sources */,
 				0437B2DF25B80B230059C0A4 /* BaseVC.swift in Sources */,
 				044DCA5325B91C4700A596AC /* Extension-UIColor.swift in Sources */,
 				0437B30625B82BEA0059C0A4 /* BaseNavigationVC.swift in Sources */,
-				0405A48125F3459700820C77 /* LoginCodeModel.swift in Sources */,
 				0437B26C25B7F4B90059C0A4 /* AppDelegate.swift in Sources */,
 				0437B2FE25B829250059C0A4 /* DiscoverVC.swift in Sources */,
 				045E769F25BAD1D900187A68 /* RoomVC.swift in Sources */,

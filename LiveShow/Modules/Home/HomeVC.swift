@@ -36,6 +36,31 @@ class HomeVC: BaseVC {
         print("touchesBegan")
         //let roomVc:UIViewController = RoomVC(nibName: "RoomVC", bundle: Bundle.main)
         //navigationController?.pushViewController(roomVc, animated: true)
+        
+        let requestUrl = "http://test.lexbst.com/bst-app/index.php/market/goods/cates1"
+        let content = "{\"token\":\"\(UserDefaults.standard.value(forKey: "token")!)\"}"
+        var parameters: [String: Any]? = nil
+        parameters = ["param": content,"partnerName": "bst-project","__version": "4.9.0"]
+        NetworkTools.requestData(url: requestUrl, method: .post, parameters: parameters) { (response) in
+            print("response:\(response)")
+            //JSON
+            guard let resultJson = response.result.value else {return}
+            //print("resultJson:\(resultJson)")
+            //字典
+            guard let resultDict = resultJson as? [String: Any] else { return }
+            //print("resultJson:\(resultDict)")
+            //Model
+            if let data: Data = response.data {
+                
+                //let baseModel: LiveCateModel  = try! JSONDecoder().decode(LiveCateModel.self, from: data)
+                do {
+                    let baseModel = try JSONDecoder().decode(LiveCateModel.self, from: data)
+                    print(baseModel.info?.top_cate?.first)
+                } catch let error as NSError {
+                    print("json解析出错\(error.userInfo)")
+                }
+            }
+        }
     }
 }
 

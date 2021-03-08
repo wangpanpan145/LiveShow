@@ -2,17 +2,11 @@
 //  BaseModel.swift
 //  LiveShow
 //
-//  Created by mac on 2021/3/6.
+//  Created by mac on 2021/3/8.
 //
 
 import UIKit
-
-class BaseModel: NSObject {
-    init(dict: [String: Any]) {
-        super.init()
-        setValuesForKeys(dict)
-    }
-    override class func setValue(_ value: Any?, forKey key: String) {
-        
-    }
+class BaseModel: NSObject, Codable{
+    var message: String?
+    var code: Int?
 }

@@ -9,7 +9,6 @@ import UIKit
 import Alamofire
 class LoginVC: UIViewController {
     var tf: UITextField?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.init(r: 255, g: 255, b: 255)
@@ -44,42 +43,78 @@ class LoginVC: UIViewController {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        AppDelegate.init().changeRootViewController()
     }
     @objc func clickLoginButton(sender: UIButton) -> Void {
         print("登录")
-    }
-    @objc func clickCodeButton(sender: UIButton) -> Void {
         guard let codeText = self.tf?.text else { return }
         if codeText.count == 0 {
             print("验证码不能为0")
             return
         }
-        print("网络请求...")
-        let requestUrl = "http://test.lexbst.com/bst-app/index.php/phones/sendMsg"
+        let requestUrl = "http://test.lexbst.com/bst-app/index.php/phones/codelogin"
         let content = "{\"mobile\":\"13505613657\",\"code\":\"\(codeText)\"}"
-
         var parameters: [String: Any]? = nil
         parameters = ["param": content,"partnerName": "bst-project","__version": "4.9.0"]
-        
-        NetworkTools.requestData(url: requestUrl, method: .post, parameters: parameters) { result in
-            print(result)
-            guard let resultDic = result as? [String: Any] else {return}
-            
-            
-            
+        NetworkTools.requestData(url: requestUrl, method: .post, parameters: parameters) { (response) in
+            print("response:\(response)")
+            //JSON
+            guard let resultJson = response.result.value else {return}
+            print("resultJson:\(resultJson)")
+            //字典
+            guard let resultDict = resultJson as? [String: Any] else { return }
+            print("resultJson:\(resultDict)")
+            //Model
+            if let data: Data = response.data {
+                let baseModel: LoginModel  = try! JSONDecoder().decode(LoginModel.self, from: data)
+                let userDefaults = UserDefaults.standard
+                userDefaults.setValue(baseModel.info?.token, forKey: "token")
+                userDefaults.setValue(baseModel.info?.avatar, forKey: "avatar")
+                userDefaults.setValue(baseModel.info?.nickname, forKey: "nickname")
+                userDefaults.setValue(baseModel.info?.rand_string, forKey: "rand_string")
+                userDefaults.setValue(baseModel.info?.sig, forKey: "sig")
+                userDefaults.setValue(baseModel.info?.username, forKey: "username")
+                userDefaults.synchronize()
+                //切换控制器
+                AppDelegate.init().changeRootViewController()
+            }
         }
+    }
+    @objc func clickCodeButton(sender: UIButton) -> Void {
+        print("获取验证码")
+        let requestUrl = "http://test.lexbst.com/bst-app/index.php/phones/sendMsg"
+        let content = "{\"phone\":\"13505613657\"}"
+        var parameters: [String: Any]? = nil
+        parameters = ["param": content,"partnerName": "bst-project","__version": "4.9.0"]
+        NetworkTools.requestData(url: requestUrl, method: .post, parameters: parameters) { (response) in
+            print("response:\(response)")
+            //JSON
+            guard let resultJson = response.result.value else {return}
+            print("resultJson:\(resultJson)")
+            //字典
+            guard let resultDict = resultJson as? [String: Any] else { return }
+            print("resultJson:\(resultDict)")
+            //Model
+            if let data: Data = response.data {
+                let baseModel: BaseModel  = try! JSONDecoder().decode(BaseModel.self, from: data)
+                if let message = baseModel.message {
+                    print(message)
+                }
+            }
+        }
+    }
+    deinit {
+        print("LoginVC---销毁")
     }
 }
 
 
 /**
- PPNetworkHelper.m--166--->:requestURL:http://test.lexbst.com/bst-app/index.php//phones/codelogin
- requestParameters:{
-     param = {"mobile":"13505613657","code":"732175"};
-     partnerName = bst-project;
-     rand_string = "";
-     __version = 4.9.0;
- }
+ guard let resultDic = response.result.value as? [String: Any] else {return}
+ let jsonDecoder = JSONDecoder()
+ let model: BaseModel = try! jsonDecoder.decode(BaseModel.self, from: response.data!)
+ print("resultDic:\(resultDic)")
+
  
  PPNetworkHelper.m--166--->:requestURL:http://test.lexbst.com/bst-app/index.php/user/personal/getinfo
  requestParameters:{
@@ -152,3 +187,4 @@ class LoginVC: UIViewController {
      __version = 4.9.0;
  }
  */
+
