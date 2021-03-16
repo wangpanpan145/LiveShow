@@ -8,5 +8,6 @@ target 'LiveShow' do
   # Pods for LiveShow
 pod 'Alamofire'
 pod 'Kingfisher'
+pod 'YYKit'
 
 end
