@@ -44,18 +44,21 @@ class HomeVC: BaseVC {
         NetworkTools.requestData(url: requestUrl, method: .post, parameters: parameters) { (response) in
             print("response:\(response)")
             //JSON
-            guard let resultJson = response.result.value else {return}
+            //guard let resultJson = response.result.value else {return}
             //print("resultJson:\(resultJson)")
             //字典
-            guard let resultDict = resultJson as? [String: Any] else { return }
+            //guard let resultDict = resultJson as? [String: Any] else { return }
             //print("resultJson:\(resultDict)")
             //Model
             if let data: Data = response.data {
-                
-                //let baseModel: LiveCateModel  = try! JSONDecoder().decode(LiveCateModel.self, from: data)
                 do {
                     let baseModel = try JSONDecoder().decode(LiveCateModel.self, from: data)
-                    print(baseModel.info?.top_cate?.first)
+                    for i in baseModel.info!.top_cate! {
+                        print(i)
+                    }
+                    if let pid = baseModel.info?.top_cate?.first?.pid?.string {
+                        print(pid)
+                    }
                 } catch let error as NSError {
                     print("json解析出错\(error.userInfo)")
                 }
@@ -63,4 +66,3 @@ class HomeVC: BaseVC {
         }
     }
 }
-
