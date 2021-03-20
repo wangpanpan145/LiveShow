@@ -41,12 +41,6 @@ struct TStrInt: Codable {
         }
     }
 }
-
-
-
-class HomeModel: NSObject {
-    
-}
 struct LiveCateModel: Codable {
     var message: String?
     var code: Int?

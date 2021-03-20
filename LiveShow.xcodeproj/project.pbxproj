@@ -26,6 +26,7 @@
 		044DCA5325B91C4700A596AC /* Extension-UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DCA5225B91C4700A596AC /* Extension-UIColor.swift */; };
 		045E769F25BAD1D900187A68 /* RoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E769E25BAD1D900187A68 /* RoomVC.swift */; };
 		045E76A725BAD70600187A68 /* RoomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045E76A625BAD70600187A68 /* RoomVC.xib */; };
+		047506142602F97600B407E2 /* dddd.m in Sources */ = {isa = PBXBuildFile; fileRef = 047506132602F97600B407E2 /* dddd.m */; };
 		04E0F55725EF701000A361B3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0F55625EF701000A361B3 /* NetworkTools.swift */; };
 		04FE4BF825F5CFEF00D6F734 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE4BF725F5CFEF00D6F734 /* LoginModel.swift */; };
 		04FE4BFC25F5D5B100D6F734 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE4BFB25F5D5B100D6F734 /* BaseModel.swift */; };
@@ -55,6 +56,8 @@
 		044DCA5225B91C4700A596AC /* Extension-UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-UIColor.swift"; sourceTree = "<group>"; };
 		045E769E25BAD1D900187A68 /* RoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomVC.swift; sourceTree = "<group>"; };
 		045E76A625BAD70600187A68 /* RoomVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomVC.xib; sourceTree = "<group>"; };
+		047506122602F97600B407E2 /* dddd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dddd.h; sourceTree = "<group>"; };
+		047506132602F97600B407E2 /* dddd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dddd.m; sourceTree = "<group>"; };
 		04E0F55625EF701000A361B3 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		04FE4BF725F5CFEF00D6F734 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		04FE4BFB25F5D5B100D6F734 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				04FE4C1F25F5FAFC00D6F734 /* HomeModel.swift */,
+				047506122602F97600B407E2 /* dddd.h */,
+				047506132602F97600B407E2 /* dddd.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				TargetAttributes = {
 					0437B26725B7F4B90059C0A4 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -398,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0437B2D525B804A40059C0A4 /* MainTabBarController.swift in Sources */,
+				047506142602F97600B407E2 /* dddd.m in Sources */,
 				04FE4BF825F5CFEF00D6F734 /* LoginModel.swift in Sources */,
 				04FE4BFC25F5D5B100D6F734 /* BaseModel.swift in Sources */,
 				04E0F55725EF701000A361B3 /* NetworkTools.swift in Sources */,
@@ -559,6 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8NTJBCX232;
 				INFOPLIST_FILE = LiveShow/SupportFile/Info.plist;
@@ -569,6 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wpp.LiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -580,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8NTJBCX232;
 				INFOPLIST_FILE = LiveShow/SupportFile/Info.plist;
